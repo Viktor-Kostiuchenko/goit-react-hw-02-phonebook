@@ -1,3 +1,15 @@
+.total {
+  margin-bottom: 20px;
+}
+.amount {
+  display: inline-block;
+  margin-left: 4px;
+  width: 18px;
+  text-align: center;
+  border: 1px solid #ff524b;
+  border-radius: 50%;
+  color: #ff524b;
+}
 .item {
   display: flex;
   align-items: center;
@@ -7,5 +19,5 @@
 
 .item:not(:last-child) {
   margin-bottom: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000;
 }
