@@ -1,13 +1,24 @@
 import React from 'react';
 import s from './ContactItem.module.css';
+import Icons from '../../../images/sprite.svg';
 
 export default function ContactItem({ id, name, number, onDeleteContact }) {
   return (
     <>
-      <div className={s.info}>
-        <p>{name}</p>
-        <p>{number}</p>
-      </div>
+      <ul className={s.info}>
+        <li className={s.item}>
+          <svg className={s.icon} width="18" height="18">
+            <use xlinkHref={`${Icons}#book`}></use>
+          </svg>
+          <p>{name}</p>
+        </li>
+        <li className={s.item}>
+          <svg className={s.icon} width="18" height="18">
+            <use xlinkHref={`${Icons}#mobile`}></use>
+          </svg>
+          <p>{number}</p>
+        </li>
+      </ul>
       <button
         type="button"
         onClick={() => onDeleteContact(id)}

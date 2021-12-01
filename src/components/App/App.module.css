@@ -2,16 +2,16 @@
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 60px;
   width: 1024px;
+  min-height: 640px;
   display: flex;
   justify-content: space-between;
 
   background-image: url('/src/images/phone.jpg');
   background: url('/src/images/phone.jpg'),
     linear-gradient(#eaeaec, #eaeaea, #e8e8e8, #dddbdc);
-  background-position: top 0 left 0;
-  background-size: contain;
+  background-position: top left, bottom left;
+  background-size: contain, cover;
   background-repeat: no-repeat, repeat-y;
 }

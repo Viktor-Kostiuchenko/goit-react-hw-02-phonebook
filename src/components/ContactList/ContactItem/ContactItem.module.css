@@ -3,6 +3,19 @@
   margin-right: 10px;
 }
 
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
 .button {
   -webkit-appearance: button;
   display: block;
@@ -39,9 +52,6 @@
   transform: translateY(-50%);
   transform-origin: center;
   transition: background 0.3s linear, width 0.3s linear;
-  /* -webkit-transform-origin: center; */
-  /* -webkit-transition: background 0.3s linear, width 0.3s linear; */
-  /* -webkit-transform: translateY(-50%); */
 }
 
 .buttonText {
@@ -53,7 +63,6 @@
   text-transform: uppercase;
   text-decoration: none;
   color: black;
-  /* -webkit-transition: all 300ms ease-in-out; */
 }
 
 .topKey {
@@ -64,7 +73,6 @@
   position: absolute;
   background: #e8e8e8;
   transition: width 500ms ease-out, left 300ms ease-out;
-  /* -webkit-transition: width 500ms ease-out, left 300ms ease-out; */
 }
 
 .firstKey {
@@ -75,7 +83,6 @@
   position: absolute;
   background: #e8e8e8;
   transition: width 500ms ease-out, right 500ms ease-out;
-  /* -webkit-transition: width 0.5s ease-out, right 0.3s ease-out; */
 }
 
 .secondKey {
@@ -86,7 +93,6 @@
   position: absolute;
   background: #e8e8e8;
   transition: width 500ms ease-out, right 300ms ease-out;
-  /* -webkit-transition: width 0.5s ease-out, right 0.3s ease-out; */
 }
 
 .button:hover {

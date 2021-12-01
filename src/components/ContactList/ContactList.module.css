@@ -1,8 +1,8 @@
 .item {
   display: flex;
-  width: 300px;
   align-items: center;
-  padding: 10px;
+  justify-content: space-between;
+  padding-bottom: 10px;
 }
 
 .item:not(:last-child) {
