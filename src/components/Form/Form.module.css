@@ -65,11 +65,12 @@
   background: #000;
   color: #fff;
   line-height: 42px;
+  letter-spacing: 0.05em;
   padding: 0;
   border: none;
 }
 
-.button span {
+.buttonName {
   position: relative;
   display: block;
   width: 100%;
@@ -105,29 +106,29 @@
   transition: all 500ms ease;
   height: 100%;
 }
-.button span:before,
-.button span:after {
+.buttonName:before,
+.buttonName:after {
   position: absolute;
   content: '';
   background: #000;
 }
-.button span:before {
+.buttonName:before {
   left: 0;
   top: 0;
   width: 0%;
   height: 2px;
   transition: all 500ms ease;
 }
-.button span:after {
+.buttonName:after {
   right: 0;
   bottom: 0;
   width: 0%;
   height: 2px;
   transition: all 500ms ease;
 }
-.button span:hover:before {
+.buttonName:hover:before {
   width: 100%;
 }
-.button span:hover:after {
+.buttonName:hover:after {
   width: 100%;
 }

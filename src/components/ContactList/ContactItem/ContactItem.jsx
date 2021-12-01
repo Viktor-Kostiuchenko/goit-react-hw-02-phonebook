@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './ContactItem.module.css';
-import Icons from '../../../images/sprite.svg';
+import Icons from '../../../images/icons/sprite.svg';
 
 export default function ContactItem({ id, name, number, onDeleteContact }) {
   return (
@@ -13,7 +14,7 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
           <p>{name}</p>
         </li>
         <li className={s.item}>
-          <svg className={s.icon} width="18" height="18">
+          <svg className={`${s.icon} ${s.animation}`} width="18" height="18">
             <use xlinkHref={`${Icons}#mobile`}></use>
           </svg>
           <p>{number}</p>
@@ -32,3 +33,8 @@ export default function ContactItem({ id, name, number, onDeleteContact }) {
     </>
   );
 }
+
+ContactItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+};

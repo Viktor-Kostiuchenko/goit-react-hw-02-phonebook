@@ -5,15 +5,7 @@
   margin-right: auto;
   padding: 60px;
   padding-top: 80px;
-  width: 1024px;
   min-height: 640px;
   display: flex;
   justify-content: space-between;
-
-  background-image: url('/src/images/phone.jpg');
-  background: url('/src/images/phone.jpg'),
-    linear-gradient(#eaeaec, #eaeaea, #e8e8e8, #dddbdc);
-  background-position: top left, bottom left;
-  background-size: contain, cover;
-  background-repeat: no-repeat, repeat-y;
 }

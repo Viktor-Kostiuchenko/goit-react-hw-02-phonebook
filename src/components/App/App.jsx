@@ -5,8 +5,8 @@ import Form from '../Form';
 import ContactList from '../ContactList';
 import Filter from '../Filter';
 import Logo from '../Logo';
+import { notificate } from '../../helpers/Notification';
 import s from './App.module.css';
-import logo from '../../images/logo.png';
 
 export default class App extends Component {
   state = {
@@ -15,7 +15,7 @@ export default class App extends Component {
       { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
       { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
-      { id: 'id-5', name: 'Viktor Kost', number: '220-19-88' },
+      { id: 'id-5', name: 'Viktor Kost', number: '221-19-88' },
     ],
     filter: '',
   };
@@ -31,10 +31,10 @@ export default class App extends Component {
     );
 
     if (nameDublicate) {
-      alert(`${newContact.name} is already in contacts`);
+      notificate(newContact.name);
       return;
     } else if (numberDublicate) {
-      alert(`${newContact.number} is already in contacts`);
+      notificate(newContact.number);
       return;
     }
 
@@ -67,7 +67,7 @@ export default class App extends Component {
     const filteredContacts = this.showFiltered();
     return (
       <div className={s.container}>
-        <Logo logo={logo}></Logo>
+        <Logo></Logo>
         <Section title="Phonebook">
           <Form onSubmit={this.addContact}></Form>
         </Section>

@@ -53,7 +53,7 @@ export default class Form extends Component {
           <label className={s.label}>Number</label>
         </div>
         <button className={s.button} type="submit">
-          <span>Add contact</span>
+          <span className={s.buttonName}>Add contact</span>
         </button>
       </form>
     );

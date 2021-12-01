@@ -1,14 +1,13 @@
 import React from 'react';
 import s from './Logo.module.css';
+import logo from '../../images/logo.png';
 
-export default function Logo({ logo }) {
+export default function Logo() {
   return (
     <>
-      {logo && (
-        <a className={s.link} href="../../../build/index.html">
-          <img className={s.logo} src={logo} alt="logo" />
-        </a>
-      )}
+      <a className={s.link} href="./index.html">
+        <img className={s.logo} src={logo} alt="logo" />
+      </a>
     </>
   );
 }

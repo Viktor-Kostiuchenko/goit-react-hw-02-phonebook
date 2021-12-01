@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import s from './Filter.module.css';
 
 export default function Filter({ value, onChange }) {
+  console.log(value);
   return (
     <label className={s.label}>
       Find contacts by name
@@ -19,3 +21,7 @@ export default function Filter({ value, onChange }) {
     </label>
   );
 }
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+};
