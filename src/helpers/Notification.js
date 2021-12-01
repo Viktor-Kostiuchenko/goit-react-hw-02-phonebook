@@ -32,5 +32,7 @@ Notiflix.Notify.init({
   useFontAwesome: false,
   fontAwesomeIconStyle: 'basic',
   fontAwesomeIconSize: '34px',
-  background: '#ff524b',
+  warning: {
+    background: '#ff524b',
+  },
 });
