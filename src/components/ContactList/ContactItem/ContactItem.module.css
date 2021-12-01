@@ -1,6 +1,8 @@
 .info {
   width: 200px;
   margin-right: 10px;
+  cursor: pointer;
+  transition: color 300ms ease-in-out;
 }
 
 .item {
@@ -8,10 +10,20 @@
   align-items: center;
 }
 
+.icon {
+  transition: fill 300ms ease-in-out;
+}
 .item:not(:last-child) {
   margin-bottom: 10px;
 }
 
+.info:hover {
+  color: #ff524b;
+}
+
+.info:hover .icon {
+  fill: #ff524b;
+}
 .icon {
   margin-right: 5px;
 }

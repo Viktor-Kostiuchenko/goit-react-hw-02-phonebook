@@ -4,7 +4,9 @@ import Section from '../Section';
 import Form from '../Form';
 import ContactList from '../ContactList';
 import Filter from '../Filter';
+import Logo from '../Logo';
 import s from './App.module.css';
+import logo from '../../images/logo.png';
 
 export default class App extends Component {
   state = {
@@ -65,6 +67,7 @@ export default class App extends Component {
     const filteredContacts = this.showFiltered();
     return (
       <div className={s.container}>
+        <Logo logo={logo}></Logo>
         <Section title="Phonebook">
           <Form onSubmit={this.addContact}></Form>
         </Section>
