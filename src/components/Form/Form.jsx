@@ -8,7 +8,6 @@ export default class Form extends Component {
   };
 
   onChange = e => {
-    console.log();
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
   };
