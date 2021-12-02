@@ -50,7 +50,7 @@ export default class App extends Component {
   };
 
   filterBy = e => {
-    this.setState({ filter: e.currentTarget.value });
+    this.setState({ filter: e.target.value });
   };
 
   showFiltered = () => {

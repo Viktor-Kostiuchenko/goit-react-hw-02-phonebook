@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Filter.module.css';
+import { DebounceInput } from 'react-debounce-input';
 
 export default function Filter({ value, onChange }) {
   return (
     <label className={s.label}>
       Find contacts by name
       <div className={s.wrapper}>
-        <input
+        <DebounceInput
+          debounceTimeout={500}
           className={s.input}
           type="text"
           value={value}
