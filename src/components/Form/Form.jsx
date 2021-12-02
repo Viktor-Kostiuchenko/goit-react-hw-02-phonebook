@@ -23,13 +23,14 @@ export default class Form extends Component {
   };
 
   render() {
+    const { name, value } = this.state;
     return (
       <form onSubmit={this.onSubmit} autoComplete="off">
         <div className={s.inputBox}>
           <input
             className={s.input}
             onChange={this.onChange}
-            value={this.state.name}
+            value={name}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -42,7 +43,7 @@ export default class Form extends Component {
           <input
             className={s.input}
             onChange={this.onChange}
-            value={this.state.number}
+            value={value}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
