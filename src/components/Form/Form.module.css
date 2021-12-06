@@ -1,8 +1,8 @@
 .inputBox {
   position: relative;
   padding: 15px 0 0;
-  margin-bottom: 30px;
-  width: 50%;
+  margin-bottom: 50px;
+  width: 236px;
 }
 
 .input {
@@ -40,7 +40,7 @@
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: #ff524b;
+  color: #000;
   font-weight: 700;
 }
 
@@ -131,4 +131,11 @@
 }
 .buttonName:hover:after {
   width: 100%;
+}
+
+.errorMsg {
+  position: absolute;
+  top: 100%;
+  font-size: 9px;
+  color: red;
 }

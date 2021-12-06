@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './ContactItem.module.css';
 import Icons from '../../../images/icons/sprite.svg';
+import s from './ContactItem.module.css';
 
 export default function ContactItem({ id, name, number, onDeleteContact }) {
   return (

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import Section from '../Section';
-import Form from '../Form';
+import ContactForm from '../Form';
 import ContactList from '../ContactList';
 import Filter from '../Filter';
 import Logo from '../Logo';
-import { notificate } from '../../helpers/Notification';
+import { notificate } from '../../helpers/notifications';
 import s from './App.module.css';
 
 export default class App extends Component {
@@ -49,7 +49,7 @@ export default class App extends Component {
     }));
   };
 
-  filterBy = e => {
+  filterByName = e => {
     this.setState({ filter: e.target.value });
   };
 
@@ -65,18 +65,22 @@ export default class App extends Component {
   render() {
     const { filter } = this.state;
     const filteredContacts = this.showFiltered();
+    const filterByName = this.filterByName;
+    const addContact = this.addContact;
+    const deleteContact = this.deleteContact;
+
     return (
       <div className={s.container}>
         <Logo></Logo>
         <Section title="Phonebook">
-          <Form onSubmit={this.addContact}></Form>
+          <ContactForm onSubmit={addContact}></ContactForm>
         </Section>
 
         <Section title="Contacts">
-          <Filter value={filter} onChange={this.filterBy}></Filter>
+          <Filter value={filter} onChange={filterByName}></Filter>
           <ContactList
             contacts={filteredContacts}
-            onDeleteContact={this.deleteContact}
+            onDeleteContact={deleteContact}
           ></ContactList>
         </Section>
       </div>

@@ -4,10 +4,8 @@ import logo from '../../images/logo.png';
 
 export default function Logo() {
   return (
-    <>
-      <a className={s.link} href="./index.html">
-        <img className={s.logo} src={logo} alt="logo" />
-      </a>
-    </>
+    <a className={s.link} href="./index.html">
+      <img className={s.logo} src={logo} alt="logo" />
+    </a>
   );
 }
